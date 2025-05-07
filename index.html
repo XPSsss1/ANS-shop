@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>ANS Shop - Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANS Shop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="bg.mp3" type="audio/mpeg" />
-  </audio>
+    <!-- Background Music -->
+    <audio id="background-music" loop autoplay>
+        <source src="assets/maml.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
-  <div class="sidebar">
-    <h2>ANS Shop</h2>
-    <a href="index.html">Home</a>
-    <a href="marketplace.html">Marketplace</a>
-    <a href="support.html">Support</a>
-  </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+        </ul>
+    </div>
 
-  <div class="main">
-    <h1>Welcome to ANS Shop</h1>
-    <p>Underground tools. Clean design. Hacker vibes.</p>
-  </div>
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to ANS Shop</h1>
+        <p>Your one-stop shop for premium hacking tools and more.</p>
+    </div>
+
+    <!-- Optional: Button to toggle music play/pause -->
+    <button onclick="toggleMusic()">Toggle Music</button>
+
+    <script>
+        // Function to toggle music on and off
+        function toggleMusic() {
+            const music = document.getElementById('background-music');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
 </body>
 </html>
